@@ -1,36 +1,229 @@
+
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
         <style>
             body{
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-image: url('https://imgs.search.brave.com/W9-mAMee7b-jYhEpVimyxzWAaePBMHSx_tDAi1nRlpA/rs:fit:1200:1200:1/g:ce/aHR0cDovL3dhbGxw/YXBlcmNhdmUuY29t/L3dwL3RYOTVuNHYu/anBn');
+                  overflow:hidden;
+                 
+            }
+            img{
+
+               margin-top: 5%;
+               margin-bottom: 5%;
+               
             }
             div{
                 text-align: center;
             }
-            button{
-                font-size: 40px ;
-                margin:20px;
-                width:50px;
-            }
+        
+         .span{
+            width:15%;
+         }
+        
+         #dropdown-list{
+            display:none;
+         }
+         .sidebar-menu {
+  width: 15%;
+  height: 100%;
+  position: absolute; 
+  left: 0;
+  background-color: #333; 
+  padding-top: 20px;
+}
+
+.sidebar-link {
+  display: block;
+  /* padding: 10px 20px; */
+  color: #fff; /* Text color for the links */
+  text-decoration: none;
+}
+
+.sidebar-link:hover {
+  background-color: #555; /* Background color on hover */
+}
+
+.sidebar-dropdown {
+ 
+  color:white;
+}
+
+.sidebar-dropdown li {
+    padding:10px;
+  text-decoration: none;
+  margin:10px;
+}
+
+.nav{
+    text-align: center;
+    
+}
+#head{
+    text-align:center;
+    color:white;
+    margin:0 auto;
+    height:20%;
+}
+#details{
+    background-color: #333; 
+    left:80%;
+    width:20%;
+    position:absolute;
+    height:100%;
+    top:45px;
+    color:white;
+    text-align: left;
+    padding:10px;
+}
         </style>
 
     </head>
-    <body>
-        <div>
-          <button id="first">A</button>
-          <button id="second">S</button>
-          <button id="third">D</button>
-          <button id="fourth">F</button>
-          <button id="fifth">G</button>
-          <button id="sixth">H</button>
-          <button id="seventh">J</button>
-          <button id="eighth">K</button>
-          <button id="ninth">L</button>
+    <body>  
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+               <h4 id="head">Drums Kit</h4>
+            </nav>
 
-        </div>
+          <div class="sidebar-menu">
+            <a id="drums-component" class="sidebar-link">
+              <span class="dropdown">Drums Component</span>
+            </a>
+            <ul id="dropdown-list" class="sidebar-dropdown">
+
+              <li class="list-group-item py-1">
+                <a id="ride">Ride Cymbal</a>
+                <div id="ride-show" style="display: none;">A ride cymbal is a fundamental component of a drum kit, essential for creating rhythm and texture in various music genres, particularly in rock, jazz, and more. ]
+                  It is a large, round, and typically thicker cymbal with a bright, sustained sound. 
+                  Drummers strike it with a drumstick or mallet to produce a clear and defined "ping" or "wash" sound that can be used for maintaining a steady beat, adding accents, or creating intricate patterns. 
+                  Its versatility makes it a central element in drumming, allowing drummers to explore dynamics and expressiveness while maintaining a steady groove in a wide range of musical contexts.</div>
+              </li>
+
+              <!-- <li class="list-group-item py-1">
+                <a id="rack">Rack Toms</a>
+                <div id="rack-show" style="display:none;">
+                  Rack toms are an integral part of a drum kit, providing depth and versatility to a drummer's sound palette. 
+                  Positioned above the bass drum, these shallow, mounted drums are typically smaller in diameter than floor toms. 
+                  They come in various sizes, from 8 to 16 inches, each producing a unique pitch and tone. 
+                  Drummers use rack toms for rhythmic accents, fills, and creative embellishments in their beats. 
+                  The positioning and tuning of rack toms allow for quick access and fluid transitions during performances, 
+                  making them a crucial component in crafting dynamic and expressive drumming patterns across various music genres.
+                </div>
+              </li> -->
+
+              <li class="list-group-item py-1">
+                <a id="medium">Medium Tom</a>
+                <div id="medium-show" style="display:none;">
+                  Medium toms, often referred to as "mid-toms," are essential elements of a drum kit, contributing to its sonic versatility. 
+                  These mounted drums, typically situated between the smaller rack toms and the larger floor toms, come in various sizes, usually ranging from 10 to 14 inches in diameter. 
+                  They offer a balanced and warm tonal range, making them suitable for both fills and rhythmic patterns. 
+                  Medium toms are commonly used by drummers to add depth and complexity to their beats, creating a sense of progression and excitement. 
+                  Their placement and tuning enable seamless transitions between different tom sizes, enhancing the drummer's ability to craft intricate and dynamic rhythms across diverse musical genres.
+                </div>
+              </li>
+
+              <li class="list-group-item py-1">
+                <a id="tom">Hi Tom</a>
+                <div id="tom-show" style="display:none;">
+                  The high tom, also known as the "hi-tom" or "high mounted tom," is a fundamental component of a drum kit, providing a distinct tonal character and dynamic range. 
+                  Typically perched above the medium and floor toms, hi-toms come in various sizes, usually ranging from 12 to 18 inches in diameter. 
+                  They produce higher-pitched tones compared to their larger counterparts, adding brightness and clarity to a drummer's arsenal. 
+                  Hi-toms are frequently employed to create intricate fills, accents, and melodic patterns in drumming performances. 
+                  Their strategic placement and tuning allow drummers to craft intricate and expressive rhythms, 
+                  making them a crucial element in shaping the overall sound and musicality of the drum kit.
+                </div>
+              </li>
+
+              <li class="list-group-item py-1">
+                <a id="floor">Floor Drum</a>
+                <div id="floor-show" style="display:none;">
+                  The floor drum, also known as a "floor tom," is an integral part of a drum kit, contributing depth and resonance to the overall sound. 
+                  Positioned on the floor, typically to the right of the drummer, floor toms are larger than rack and hi-toms, with sizes ranging from 14 to 18 inches in diameter. 
+                  These drums produce deep, thunderous tones that add a rich low-end presence to a drummer's repertoire. 
+                  Floor toms are essential for creating impactful grooves, powerful accents, and dramatic fills in various music genres. 
+                  Their size and placement allow drummers to establish a solid foundation while adding dynamic flair to their rhythm sections, 
+                  making floor toms an essential component of any drum kit.
+                </div>
+              </li>
+
+              <li class="list-group-item py-1">
+                <a id="snare">Snare</a>
+                <div id="snare-show" style="display:none;">
+                  The snare drum is the heartbeat of a drum kit, renowned for its sharp and versatile sound. 
+                  Positioned between the drummer's knees, it typically measures 13 to 14 inches in diameter 
+                  and features a set of tightly wound metal wires called "snares" stretched across the bottom head. 
+                  When struck with drumsticks, the snare produces a crisp, staccato sound that provides the rhythmic backbone of a musical piece. 
+                  Its distinctive sound is used for accents, backbeats, and complex patterns, serving as a core element in various music genres, 
+                  from rock and pop to jazz and marching bands. 
+                  The snare's unique timbre and responsiveness make it an indispensable tool for drummers, driving the groove and adding depth to compositions.
+                </div>
+              </li>
+
+              <li class="list-group-item py-1">
+                <a id="crash">Crash Symbal</a>
+                <div id="crash-show" style="display:none;">
+                  The crash cymbal is a fundamental component of a drum kit, prized for its explosive and dramatic sound. 
+                  It consists of a thin, round metal plate suspended on a stand, ranging in size from 14 to 20 inches or more. 
+                  Drummers strike it with drumsticks, mallets, or their hands to produce a powerful, shimmering crash that cuts through the music. 
+                  Crash cymbals are often used for emphasis, signaling transitions, and adding intensity to musical passages. 
+                  Their characteristically bright and dynamic tone makes them ideal for creating climactic moments in a wide range of musical genres, 
+                  from rock and metal to orchestral and jazz performances.
+                </div>
+              </li>
+
+              <li class="list-group-item py-1">
+                <a id="hat">Hi Hat Symbal</a>
+                <div id="hat-show" style="display:none;">
+                  The hi-hat cymbal is a vital element in a drum kit, recognized for its versatile and rhythmic capabilities. 
+                  Comprising a pair of cymbals mounted on a stand, the hi-hats can be operated with a foot pedal to control their openness and closure, creating a spectrum of sounds. 
+                  Drummers use them to establish the foundational beat, keeping time with a crisp and defined "chick" sound when closed and adding a shimmering, sustained wash when opened. 
+                  Hi-hats are crucial for groove, dynamics, and accenting patterns in various musical genres, from jazz and funk to rock and pop. 
+                  Their expressive qualities make them an indispensable component in shaping the feel and texture of drumming performances.
+                </div>
+              </li>
+              
+              <li class="list-group-item py-1">
+                <a id="bass">Bass Drum</a>
+                <div id="bass-show" style="display:none;">
+                  The bass drum, often referred to as the "kick drum," is the thunderous heartbeat of a drum kit. 
+                  It's the largest drum in the setup, typically positioned on the floor and played with a foot pedal. 
+                  Measuring from 18 to 24 inches in diameter, the bass drum produces deep, resonant low-frequency thuds that provide the rhythmic foundation of a musical piece. 
+                  Drummers use it to establish the pulse, driving the groove with each powerful kick. 
+                  In various music genres, from rock and metal to dance and hip-hop, the bass drum's commanding and pulsating sound adds weight, power, and momentum, 
+                  making it an essential component in creating a compelling and dynamic rhythm.
+                </div>
+              </li>
+
+            </ul>
+          </div>
+          
+            
+        <div class="lay">
+        <img src="drums_pic.jpg"  class="image-map" usemap="#image-map">
+
+    <map name="image-map" class="image-map" >
+    <area id="fourth" alt="Ride Cymbal"  onclick="play4()" title="Ride Cymbal"  coords="113,14,313,47" shape="rect">
+    <area id="first" alt="Rack Toms" title="Rack Toms" onclick="play7()"  coords="10,137,230,164" shape="rect">
+    <area id="third" alt="Medium Tom" title="Medium Tom" onclick="play3()"  coords="236,108,365,226" shape="rect">
+    <area id="fifth" alt="Hi Tom" title="Hi Tom" onclick="play5()"  coords="376,112,486,208" shape="rect">
+    <area id="second" alt="Floor Tom" title="Floor Tom" onclick="play2()"  coords="169,226,265,335" shape="rect">
+    <area id="sixth" alt="Snare" title="Snare" onclick="play6()"  coords="431,211,585,260" shape="rect">
+    <area id="seventh" alt="Crash Cymbal" title="Crash Cymbal" onclick="play7()"  coords="439,26,616,57" shape="rect">
+    <area id="eighth" alt="Hi hat Cymbal" title="Hi hat Cymbal" onclick="play8()"  coords="559,116,700,152" shape="rect">
+    <area id="ninth" alt="Bass Drum" title="Bass Drum" onclick="play9()" coords="376,370,112" shape="circle">
+</map>
+</div>
+<div id="details">
+History: <br>Drums have a rich history dating back thousands of years. 
+They are among the oldest musical instruments, with origins in Africa, Asia, and the Americas. 
+Ancient drums were made from natural materials like animal skins and hollowed logs, used for communication, rituals, and celebrations.
+Over centuries, they evolved into diverse forms, from African djembes to Asian taiko drums. 
+Drums played a crucial role in military communication and became central to various music genres, including jazz, rock, and pop. 
+Advancements in materials and technology have led to modern drum kits with various components. 
+Today, drums remain a vital element of global music and culture.
+</div>
+
    <script src="drumset.js" type="text/javascript"></script>
     </body>
 </html>
